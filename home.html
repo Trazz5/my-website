@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechnoNewsCentral | Home</title>
+  <link rel="stylesheet" href="styless.css" />
+</head>
+<body>
+ <header class="nav-header">
+  <div class="nav-logo">
+    <img src="Tech-Nova.png" alt="Site Logo" />
+  </div>
+
+    <div class="header-nav">
+  <h1>Techno News Central</h1>
+    </div>
+
+  <nav>
+    <input
+      type="search"
+      id="nav-search"
+      placeholder="Search sections…"
+      aria-label="Search sections"
+    />
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="iot.html">Internet of Things</a></li>
+      <li><a href="ai.html">Artificial Intelligence</a></li>
+      <li><a href="cybersecurity.html">Cybersecurity</a></li>
+    </ul>
+  </nav>
+
+  <div id="search-feedback" aria-live="polite"></div>
+</header>
+
+
+<main>
+
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <img src="https://marvel-b1-cdn.bc0a.com/f00000000100045/www.elmhurst.edu/wp-content/uploads/2022/02/masters-information-technology-salary-illustration.jpg" alt="Tech Illustration" class="hero-img animated-img">
+      <div class="hero-text">
+        <h2>Explore the Future of Technology</h2>
+        <p>Dive into the evolving world of IT with insights on IoT, AI, and Cybersecurity.</p>
+        <div class="hero-buttons">
+          <a href="ai.html" class="hero-btn">AI</a>
+          <a href="cybersecurity.html" class="hero-btn">Cybersecurity</a>
+          <a href="iot.html" class="hero-btn">IoT</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+
+
+ <footer>
+  <h2>Resources</h2>
+
+  <h3>IoT</h3>
+  <div class="footer-links">
+    <a href="https://aws.amazon.com/iot-core/" target="_blank">AWS IoT Core</a>
+    <a href="https://azure.microsoft.com/services/iot-hub/" target="_blank">Azure IoT Hub</a>
+    <a href="https://cloud.google.com/solutions/iot" target="_blank">Google Cloud IoT</a>
+    <a href="https://mqtt.org/" target="_blank">MQTT</a>
+    <a href="https://coap.technology/" target="_blank">CoAP</a>
+    <a href="https://opcfoundation.org/about/opc-ua/" target="_blank">OPC UA</a>
+  </div>
+
+  <h5>Tools & Frameworks</h5>
+  <div class="footer-links">
+    <a href="https://www.edgexfoundry.org/" target="_blank">EdgeX Foundry</a>
+    <a href="https://thingspeak.com/" target="_blank">ThingSpeak</a>
+  </div>
+
+  <h3>Cybersecurity</h3>
+  <h5>Standards & Frameworks</h5>
+  <div class="footer-links">
+    <a href="https://attack.mitre.org/" target="_blank">MITRE ATT&CK®</a>
+    <a href="https://www.nist.gov/cyberframework" target="_blank">NIST Cybersecurity Framework (CSF)</a>
+  </div>
+
+  <h5>News & Analysis</h5>
+  <div class="footer-links">
+    <a href="https://krebsonsecurity.com/" target="_blank">Krebs on Security</a>
+    <a href="https://www.darkreading.com/" target="_blank">Dark Reading</a>
+  </div>
+
+  <h5>Tools & Platforms</h5>
+  <div class="footer-links">
+    <a href="https://www.wireshark.org/" target="_blank">Wireshark</a>
+    <a href="https://www.metasploit.com/" target="_blank">Metasploit Framework</a>
+    <a href="https://www.snort.org/" target="_blank">Snort</a>
+    <a href="https://suricata.io/" target="_blank">Suricata</a>
+  </div>
+
+  <h3>Artificial Intelligence (AI)</h3>
+  <h5>Frameworks & Libraries</h5>
+  <div class="footer-links">
+    <a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a>
+    <a href="https://pytorch.org/" target="_blank">PyTorch</a>
+    <a href="https://scikit-learn.org/" target="_blank">scikit-learn</a>
+  </div>
+
+  <h5>Research & Publications</h5>
+  <div class="footer-links">
+    <a href="https://arxiv.org/list/cs.AI/recent" target="_blank">arXiv – AI Section</a>
+    <a href="https://paperswithcode.com/" target="_blank">Papers with Code</a>
+  </div>
+
+  <p>&copy; 2025 TechnoNewsCentral. All rights reserved.</p>
+</footer>
+
+
+
+
+
+
+  <script>
+  document.getElementById("nav-search").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      const query = e.target.value.trim().toLowerCase();
+      let destination = "";
+
+      switch (query) {
+        case "ai":
+        case "artificial intelligence":
+          destination = "ai.html";
+          break;
+        case "cybersecurity":
+          destination = "cybersecurity.html";
+          break;
+        case "iot":
+        case "IOT":
+        case "IoT":        
+        case "internet of things":
+        case "Internet of Things":  
+        case "INTERNET OF THINGS":      
+          destination = "iot.html";
+          break;
+        case "home":
+        case "Home":
+        case "HOME":    
+          destination = "home.html";
+          break;
+        default:
+          document.getElementById("search-feedback").textContent = "No matching section found.";
+          return;
+      }
+
+      window.location.href = destination;
+    }
+  });
+</script>
+</body>
+</html>
+
